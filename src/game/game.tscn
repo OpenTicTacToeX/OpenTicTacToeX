@@ -29,33 +29,33 @@ position = Vector2( 18, 0 )
 texture = ExtResource( 3 )
 centered = false
 
-[node name="Node2D" type="Node2D" parent="board"]
+[node name="d" type="Node2D" parent="board"]
 
-[node name="11" parent="board/Node2D" instance=ExtResource( 4 )]
+[node name="aa" parent="board/d" instance=ExtResource( 4 )]
 position = Vector2( 18, 0 )
 
-[node name="12" parent="board/Node2D" instance=ExtResource( 4 )]
+[node name="ab" parent="board/d" instance=ExtResource( 4 )]
 position = Vector2( 34, 0 )
 
-[node name="13" parent="board/Node2D" instance=ExtResource( 4 )]
+[node name="ac" parent="board/d" instance=ExtResource( 4 )]
 position = Vector2( 50, 0 )
 
-[node name="21" parent="board/Node2D" instance=ExtResource( 4 )]
+[node name="ba" parent="board/d" instance=ExtResource( 4 )]
 position = Vector2( 18, 16 )
 
-[node name="22" parent="board/Node2D" instance=ExtResource( 4 )]
+[node name="bb" parent="board/d" instance=ExtResource( 4 )]
 position = Vector2( 34, 16 )
 
-[node name="23" parent="board/Node2D" instance=ExtResource( 4 )]
+[node name="bc" parent="board/d" instance=ExtResource( 4 )]
 position = Vector2( 50, 16 )
 
-[node name="31" parent="board/Node2D" instance=ExtResource( 4 )]
+[node name="ca" parent="board/d" instance=ExtResource( 4 )]
 position = Vector2( 18, 32 )
 
-[node name="32" parent="board/Node2D" instance=ExtResource( 4 )]
+[node name="cb" parent="board/d" instance=ExtResource( 4 )]
 position = Vector2( 34, 32 )
 
-[node name="33" parent="board/Node2D" instance=ExtResource( 4 )]
+[node name="cc" parent="board/d" instance=ExtResource( 4 )]
 position = Vector2( 50, 32 )
 
 [node name="turn" type="Label" parent="."]

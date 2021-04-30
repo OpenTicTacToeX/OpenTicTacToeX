@@ -5,6 +5,7 @@ extends Node
 # var a = 2
 # var b = "text"
 var turn = "X"
+var win = ""
 
 
 # Called when the node enters the scene tree for the first time.
