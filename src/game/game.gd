@@ -74,9 +74,13 @@ func _process(delta):
 					Glovar.win = "O"
 	
 	if Glovar.win == "X":
-		get_tree().quit()
+		pass
 	elif Glovar.win == "O":
-		get_tree().quit()
+		pass
+	
+	if Input.is_action_just_pressed("R"):
+		Glovar.win = ""
+		
 	
 	if $board/d/aa.state != "" and $board/d/ab.state != "" and $board/d/ac.state != "" :
 		pass
