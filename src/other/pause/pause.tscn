@@ -17,16 +17,19 @@ animations = [ {
 [node name="pause" type="CanvasLayer"]
 script = ExtResource( 3 )
 
-[node name="back" type="AnimatedSprite" parent="."]
+[node name="view" type="Node2D" parent="."]
+visible = false
+
+[node name="back" type="AnimatedSprite" parent="view"]
 modulate = Color( 1, 1, 1, 0.329412 )
 position = Vector2( 44, 24 )
 scale = Vector2( 1.375, 0.75 )
 frames = SubResource( 1 )
 
-[node name="exit" type="TouchScreenButton" parent="."]
+[node name="exit" type="TouchScreenButton" parent="view"]
 position = Vector2( 20, 12 )
 scale = Vector2( 0.5, 0.5 )
 normal = ExtResource( 2 )
 shape = SubResource( 2 )
 
-[connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="view/exit" to="." method="_on_exit_pressed"]

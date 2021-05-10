@@ -26,7 +26,7 @@ position = Vector2( 35, 16 )
 normal = ExtResource( 3 )
 shape = SubResource( 1 )
 
-[node name="TouchScreenButton2" type="TouchScreenButton" parent="Node2D"]
+[node name="exit" type="TouchScreenButton" parent="Node2D"]
 position = Vector2( 51, 18 )
 scale = Vector2( 0.75, 0.75 )
 normal = ExtResource( 4 )
@@ -37,3 +37,4 @@ scale = Vector2( 0.75, 0.75 )
 normal = ExtResource( 4 )
 
 [connection signal="pressed" from="Node2D/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Node2D/exit" to="." method="_on_exit_pressed"]
