@@ -50,15 +50,15 @@ anims/end = SubResource( 1 )
 anims/start = SubResource( 2 )
 
 [node name="menu" type="TouchScreenButton" parent="."]
-position = Vector2( 8, 16 )
+position = Vector2( 10, 16 )
 normal = ExtResource( 3 )
 
 [node name="replay" type="TouchScreenButton" parent="."]
-position = Vector2( 32, 16 )
+position = Vector2( 34, 16 )
 normal = ExtResource( 4 )
 
 [node name="exit" type="TouchScreenButton" parent="."]
-position = Vector2( 56, 16 )
+position = Vector2( 58, 16 )
 normal = ExtResource( 3 )
 
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]

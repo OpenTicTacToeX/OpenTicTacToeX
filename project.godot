@@ -11,6 +11,8 @@ config_version=4
 [application]
 
 config/name="OpenTicTacToeX"
+run/main_scene="res://src/other/menu/menu.tscn"
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 
 [autoload]
@@ -21,6 +23,8 @@ Glovar="*res://src/other/singleton/Glovar.gd"
 
 window/size/width=85
 window/size/height=48
+window/size/test_width=850
+window/size/test_height=480
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 

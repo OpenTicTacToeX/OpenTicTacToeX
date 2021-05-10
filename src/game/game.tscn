@@ -9,9 +9,9 @@
 [ext_resource path="res://textures/O.png" type="Texture" id=8]
 [ext_resource path="res://textures/X.png" type="Texture" id=9]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
 "frames": [ ExtResource( 9 ) ],
 "loop": true,
@@ -74,27 +74,27 @@ position = Vector2( 9.57716, 3.78632 )
 rotation = -0.546288
 scale = Vector2( 0.283105, 0.283105 )
 normal = ExtResource( 8 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="replay" type="TouchScreenButton" parent="menu"]
 position = Vector2( 70.3124, 1.6172 )
 rotation = 0.523599
 scale = Vector2( 0.283105, 0.283105 )
 normal = ExtResource( 9 )
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="turn" type="AnimatedSprite" parent="menu"]
 position = Vector2( 68.8216, 24.5959 )
 rotation = 0.523599
 scale = Vector2( 0.25, 0.25 )
-frames = SubResource( 3 )
+frames = SubResource( 2 )
 animation = "o"
 
 [node name="aturn" type="AnimatedSprite" parent="menu"]
 position = Vector2( 15.428, 24.9297 )
 rotation = -0.523599
 scale = Vector2( 0.25, 0.25 )
-frames = SubResource( 3 )
+frames = SubResource( 2 )
 animation = "o"
 
 [node name="end_screen" parent="." instance=ExtResource( 7 )]

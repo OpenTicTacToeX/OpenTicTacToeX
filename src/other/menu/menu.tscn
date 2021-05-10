@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://textures/fondo.png" type="Texture" id=1]
+[ext_resource path="res://textures/effect.png" type="Texture" id=2]
+[ext_resource path="res://textures/X.png" type="Texture" id=3]
+[ext_resource path="res://textures/O.png" type="Texture" id=4]
+[ext_resource path="res://src/other/menu/menu.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="menu" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="Sprite2" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="play" type="TouchScreenButton" parent="Node2D"]
+position = Vector2( 35, 16 )
+normal = ExtResource( 3 )
+shape = SubResource( 1 )
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="Node2D"]
+position = Vector2( 51, 18 )
+scale = Vector2( 0.75, 0.75 )
+normal = ExtResource( 4 )
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="Node2D"]
+position = Vector2( 23, 18 )
+scale = Vector2( 0.75, 0.75 )
+normal = ExtResource( 4 )
+
+[connection signal="pressed" from="Node2D/play" to="." method="_on_play_pressed"]
