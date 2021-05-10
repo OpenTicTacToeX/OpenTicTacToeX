@@ -27,9 +27,11 @@ func _process(delta):
 	button[2][1] = $board/d/cb.state
 	button[2][2] = $board/d/cc.state
 	if Glovar.turn == "X":
-		$turn.text = "x"
+		$menu/turn.animation = "x"
+		$menu/aturn.animation = "x"
 	elif Glovar.turn == "O":
-		$turn.text = "o"
+		$menu/turn.animation = "o"
+		$menu/aturn.animation = "o"
 		
 	for a in range(3): #I know that this is bad #don't see!
 		for b in range(3):
@@ -78,10 +80,16 @@ func _process(delta):
 	elif Glovar.win == "O":
 		pass
 	
-	if Input.is_action_just_pressed("R"):
+	if Glovar.replay == true:
 		Glovar.win = ""
 		
 	
 	if $board/d/aa.state != "" and $board/d/ab.state != "" and $board/d/ac.state != "" :
 		pass
 	
+
+
+func _on_replay_pressed():
+	Glovar.restart = true
+	$end_screen/anim.current_animation = "start"
+	#$end_screen._on_replay_pressed()

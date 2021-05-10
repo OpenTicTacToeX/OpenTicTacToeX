@@ -6,6 +6,8 @@ extends Node
 # var b = "text"
 var turn = "X"
 var win = ""
+var replay = false
+var restart= false
 
 
 # Called when the node enters the scene tree for the first time.

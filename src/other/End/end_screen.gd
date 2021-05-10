@@ -25,3 +25,19 @@ func _process(delta):
 		first = true
 		f = true
 		
+
+
+func _on_replay_pressed():
+	Glovar.replay = true
+	first = false
+	f = false
+	Glovar.win == ""
+	$anim.current_animation = "end"
+
+
+func _on_anim_animation_finished(anim_name):
+	if anim_name == "end":
+		Glovar.replay = false
+	if anim_name == "start" and Glovar.restart == true:
+		_on_replay_pressed()
+		Glovar.restart = false
