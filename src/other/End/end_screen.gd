@@ -41,3 +41,11 @@ func _on_anim_animation_finished(anim_name):
 	if anim_name == "start" and Glovar.restart == true:
 		_on_replay_pressed()
 		Glovar.restart = false
+
+
+func _on_exit_pressed():
+	get_tree().quit()
+
+
+func _on_menu_pressed():
+	get_tree().change_scene("res://src/other/menu/menu.tscn")
