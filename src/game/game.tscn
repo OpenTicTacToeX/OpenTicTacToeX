@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/other/back/back.tscn" type="PackedScene" id=1]
 [ext_resource path="res://textures/effect.png" type="Texture" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://src/other/End/end_screen.tscn" type="PackedScene" id=7]
 [ext_resource path="res://textures/O.png" type="Texture" id=8]
 [ext_resource path="res://textures/X.png" type="Texture" id=9]
+[ext_resource path="res://textures/menu/menu.png" type="Texture" id=10]
+[ext_resource path="res://textures/menu/restart.png" type="Texture" id=11]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -70,17 +72,17 @@ position = Vector2( 50, 32 )
 
 [node name="menu" type="TouchScreenButton" parent="menu"]
 pause_mode = 2
-position = Vector2( 9.57716, 3.78632 )
+position = Vector2( 4.57716, 5.78632 )
 rotation = -0.546288
-scale = Vector2( 0.283105, 0.283105 )
-normal = ExtResource( 8 )
+scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 10 )
 shape = SubResource( 1 )
 
 [node name="replay" type="TouchScreenButton" parent="menu"]
-position = Vector2( 70.3124, 1.6172 )
+position = Vector2( 72, 1 )
 rotation = 0.523599
-scale = Vector2( 0.283105, 0.283105 )
-normal = ExtResource( 9 )
+scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 11 )
 shape = SubResource( 1 )
 
 [node name="turn" type="AnimatedSprite" parent="menu"]
