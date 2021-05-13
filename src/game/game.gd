@@ -103,3 +103,14 @@ func _on_menu_pressed():
 		$pause/view.hide()
 		get_tree().paused = false
 		
+
+
+func _on_view_pressed():
+	$end_screen/timetoview.start()
+	$end_screen.hide()
+	get_tree().paused = true
+
+
+func _on_timetoview_timeout():
+	get_tree().paused = false
+	$end_screen.show()

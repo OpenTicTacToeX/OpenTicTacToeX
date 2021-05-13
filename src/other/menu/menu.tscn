@@ -5,7 +5,7 @@
 [ext_resource path="res://textures/menu/play.png" type="Texture" id=3]
 [ext_resource path="res://textures/menu/store.png" type="Texture" id=4]
 [ext_resource path="res://src/other/menu/menu.gd" type="Script" id=5]
-[ext_resource path="res://textures/menu/exit.png" type="Texture" id=6]
+[ext_resource path="res://textures/menu/x.png" type="Texture" id=6]
 [ext_resource path="res://src/other/save/save.tscn" type="PackedScene" id=7]
 [ext_resource path="res://textures/icon/header.png" type="Texture" id=8]
 
@@ -23,16 +23,19 @@ centered = false
 [node name="Node2D" type="Node2D" parent="."]
 
 [node name="play" type="TouchScreenButton" parent="Node2D"]
+modulate = Color( 0.356863, 0.431373, 1, 1 )
 position = Vector2( 35, 16 )
 normal = ExtResource( 3 )
 shape = SubResource( 1 )
 
 [node name="exit" type="TouchScreenButton" parent="Node2D"]
-position = Vector2( 51, 18 )
-scale = Vector2( 0.75, 0.75 )
+modulate = Color( 0.67451, 0.196078, 0.196078, 1 )
+position = Vector2( 52.5591, 20.6704 )
+scale = Vector2( 0.415913, 0.415913 )
 normal = ExtResource( 6 )
 
 [node name="TouchScreenButton3" type="TouchScreenButton" parent="Node2D"]
+modulate = Color( 0.67451, 0.196078, 0.196078, 1 )
 position = Vector2( 23, 18 )
 scale = Vector2( 0.75, 0.75 )
 normal = ExtResource( 4 )
