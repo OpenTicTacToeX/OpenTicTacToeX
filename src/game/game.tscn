@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://src/other/back/back.tscn" type="PackedScene" id=1]
 [ext_resource path="res://textures/effect.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://textures/X.png" type="Texture" id=9]
 [ext_resource path="res://textures/menu/menu.png" type="Texture" id=10]
 [ext_resource path="res://textures/menu/restart.png" type="Texture" id=11]
+[ext_resource path="res://src/other/save/save.tscn" type="PackedScene" id=12]
 
 [sub_resource type="RectangleShape2D" id=1]
 
@@ -107,6 +108,8 @@ centered = false
 
 [node name="pause" parent="." instance=ExtResource( 5 )]
 pause_mode = 2
+
+[node name="save" parent="." instance=ExtResource( 12 )]
 
 [connection signal="pressed" from="menu/menu" to="." method="_on_menu_pressed"]
 [connection signal="pressed" from="menu/replay" to="." method="_on_replay_pressed"]

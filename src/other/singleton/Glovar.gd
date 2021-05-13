@@ -8,13 +8,20 @@ var turn = "X"
 var win = ""
 var replay = false
 var restart= false
+var size = Vector2()
+var savesize = Vector2()
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	get_tree().set_auto_accept_quit(false)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	size = OS.get_window_size()
+	if Input.is_action_just_pressed("fullscreen"):
+		OS.window_fullscreen = !OS.window_fullscreen
+	elif Input.is_action_just_pressed("reset_SIZE"):
+		OS.set_window_size(Vector2(850,480))
+		OS.window_fullscreen = false

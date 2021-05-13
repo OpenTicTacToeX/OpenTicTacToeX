@@ -45,6 +45,7 @@ func _on_anim_animation_finished(anim_name):
 
 func _on_exit_pressed():
 	get_tree().quit()
+	$save._save()
 
 
 func _on_menu_pressed():
