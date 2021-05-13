@@ -29,7 +29,8 @@ _global_script_class_icons={
 config/name="OpenTicTacToeX"
 run/main_scene="res://src/other/menu/menu.tscn"
 boot_splash/bg_color=Color( 0, 0, 0, 1 )
-config/icon="res://icon.png"
+config/icon="res://textures/icon/icon.png"
+config/windows_native_icon="res://textures/icon/icon.ico"
 
 [autoload]
 
