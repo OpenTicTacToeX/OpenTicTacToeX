@@ -10,4 +10,8 @@ script = ExtResource( 2 )
 script = ExtResource( 1 )
 mode = 1
 folder_name = "save"
-no_valid_names = [ "default" ]
+
+[node name="deco" type="Node" parent="."]
+script = ExtResource( 1 )
+mode = 1
+folder_name = "save"

@@ -27,14 +27,39 @@ func _loadsize():
 	if data.empty():
 		_savesize()
 	else:
+		if data.has("sizex") == false:
+			data["sizex"] = 850
+			data["sizey"] = 480
+			$size.save_data("size")
 		Glovar.size.x = data["sizex"]
 		Glovar.size.y = int(data["sizex"] / 16 * 9)
 		OS.window_fullscreen = data["fullscreen"]
 		OS.set_window_size(Glovar.size)
 
+func _savedeco():
+	var data = $deco.get_data("deco")
+	data["back"] = Glovar.back
+	data["board"] = Glovar.board
+	$deco.save_data("deco")
+	
+func _loaddeco():
+	var data = $deco.get_data("deco")
+	if data.empty():
+		_savesize()
+	else:
+		if data.has("back") == false:
+			data["back"] = 1
+		elif data.has("board") == false:
+			data["board"] = 1
+		Glovar.back = data["back"]
+		Glovar.board = data["board"]
+	
+
 func _save():
 	_savesize()
+	_savedeco()
 func _load():
 	_loadsize()
+	_loaddeco()
 	
 
