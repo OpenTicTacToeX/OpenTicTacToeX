@@ -34,7 +34,7 @@ position = Vector2( 52.5591, 20.6704 )
 scale = Vector2( 0.415913, 0.415913 )
 normal = ExtResource( 6 )
 
-[node name="TouchScreenButton3" type="TouchScreenButton" parent="Node2D"]
+[node name="store" type="TouchScreenButton" parent="Node2D"]
 modulate = Color( 0.67451, 0.196078, 0.196078, 1 )
 position = Vector2( 23, 18 )
 scale = Vector2( 0.75, 0.75 )

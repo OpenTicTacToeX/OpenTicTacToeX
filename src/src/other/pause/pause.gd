@@ -15,6 +15,13 @@ func _ready():
 #func _process(delta):
 #	pass
 
+func _notification(what):
+	if (what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST):
+		#
+		$save._save()
+		#
+		get_tree().quit()
+
 
 func _on_exit_pressed():
 	$save._save()
