@@ -82,3 +82,8 @@ func _load():
 	_loadscore()
 	
 
+func _delete():
+	$deco.remove_profile("deco")
+	$size.remove_profile("size")
+	$score.remove_profile("score")
+	get_tree().quit()

@@ -21,6 +21,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
+	
+	
+	
 	button[0][0] = $board/d/aa.state
 	button[0][1] = $board/d/ab.state
 	button[0][2] = $board/d/ac.state

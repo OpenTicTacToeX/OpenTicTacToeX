@@ -14,8 +14,8 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+#func _process(delta):
+#	pass
 
 
 func _on_play_pressed():
@@ -38,3 +38,7 @@ func _notification(what):
 func _on_store_pressed():
 	$save._save()
 	get_tree().change_scene("res://src/other/store/store.tscn")
+
+
+func _on_delete_all_pressed():
+	get_tree().change_scene("res://src/other/delete/delete.tscn")
