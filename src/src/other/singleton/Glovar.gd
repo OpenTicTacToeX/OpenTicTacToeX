@@ -10,6 +10,7 @@ var replay = false
 var restart= false
 var size = Vector2()
 var savesize = Vector2()
+var back = 1
 
 
 # Called when the node enters the scene tree for the first time.

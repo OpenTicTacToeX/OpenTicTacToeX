@@ -33,3 +33,8 @@ func _notification(what):
 		#
 		get_tree().quit()
 
+
+
+func _on_store_pressed():
+	$save._save()
+	get_tree().change_scene("res://src/other/store/store.tscn")

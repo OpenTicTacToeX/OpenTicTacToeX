@@ -2,7 +2,7 @@
 
 [ext_resource path="res://src/other/back/back.tscn" type="PackedScene" id=1]
 [ext_resource path="res://textures/effect.png" type="Texture" id=2]
-[ext_resource path="res://textures/board.png" type="Texture" id=3]
+[ext_resource path="res://src/other/board/board.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/other/buttons/XO/XO.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/other/pause/pause.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/game/game.gd" type="Script" id=6]
@@ -14,9 +14,9 @@
 [ext_resource path="res://src/other/save/save.tscn" type="PackedScene" id=12]
 [ext_resource path="res://textures/menu/view.png" type="Texture" id=13]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ ExtResource( 9 ) ],
 "loop": true,
@@ -36,10 +36,8 @@ script = ExtResource( 6 )
 
 [node name="board" type="Node2D" parent="."]
 
-[node name="Sprite" type="Sprite" parent="board"]
+[node name="board" parent="board" instance=ExtResource( 3 )]
 position = Vector2( 18, 0 )
-texture = ExtResource( 3 )
-centered = false
 
 [node name="d" type="Node2D" parent="board"]
 
@@ -79,7 +77,7 @@ position = Vector2( 4.57716, 5.78632 )
 rotation = -0.546288
 scale = Vector2( 0.5, 0.5 )
 normal = ExtResource( 10 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="replay" type="TouchScreenButton" parent="menu"]
 modulate = Color( 0.356863, 0.431373, 1, 1 )
@@ -87,20 +85,20 @@ position = Vector2( 72, 1 )
 rotation = 0.523599
 scale = Vector2( 0.5, 0.5 )
 normal = ExtResource( 11 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="turn" type="AnimatedSprite" parent="menu"]
 position = Vector2( 68.8216, 24.5959 )
 rotation = 0.523599
 scale = Vector2( 0.25, 0.25 )
-frames = SubResource( 2 )
+frames = SubResource( 3 )
 animation = "o"
 
 [node name="aturn" type="AnimatedSprite" parent="menu"]
 position = Vector2( 15.428, 24.9297 )
 rotation = -0.523599
 scale = Vector2( 0.25, 0.25 )
-frames = SubResource( 2 )
+frames = SubResource( 3 )
 animation = "o"
 
 [node name="end_screen" parent="." instance=ExtResource( 7 )]
