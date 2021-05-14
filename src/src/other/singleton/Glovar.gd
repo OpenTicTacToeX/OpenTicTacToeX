@@ -12,6 +12,7 @@ var size = Vector2()
 var savesize = Vector2()
 var back = 1
 var board = 1
+var score = 0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -21,6 +22,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	print(score)
 	size = OS.get_window_size()
 	if Input.is_action_just_pressed("fullscreen"):
 		OS.window_fullscreen = !OS.window_fullscreen

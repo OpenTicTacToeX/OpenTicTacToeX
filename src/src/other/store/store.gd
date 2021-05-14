@@ -12,8 +12,8 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	$score.text = str(Glovar.score)
 
 func _on_exit_pressed():
 	$save._save()

@@ -54,12 +54,31 @@ func _loaddeco():
 		Glovar.back = data["back"]
 		Glovar.board = data["board"]
 	
+func _savescore():
+	var data = $score.get_data("score")
+	data["score"] = Glovar.score
+	$score.save_data("score")
+
+func _loadscore():
+	var data = $score.get_data("score")
+	if data.empty():
+		_savescore()
+	else:
+		
+		#al no tener "algo", se guarda ese "algo", con
+		#un dato que tenga sentido
+		if data.has("score") == false:
+			data["score"] = 0
+		
+		Glovar.score = data["score"]
 
 func _save():
 	_savesize()
 	_savedeco()
+	_savescore()
 func _load():
 	_loadsize()
 	_loaddeco()
+	_loadscore()
 	
 

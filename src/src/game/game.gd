@@ -7,12 +7,16 @@ extends Node2D
 var a = 0
 var b = 0
 var button = [["","",""],["","",""],["","",""]]
+var scoreplus = true
+var plus = 1
 
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	scoreplus = true
 	Glovar.win = ""
+	plus = 1
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -38,50 +42,68 @@ func _process(delta):
 			if (b == 0 and a == 0):
 				if button[a][b] == "X" and button[a][b+1] == "X" and button[a][b+2] == "X":
 					Glovar.win = "X"
+					plus = 3
 				elif button[a][b] == "X" and button[a-1][b-1] == "X" and button[a-2][b-2] == "X":
 					Glovar.win = "X"
+					plus = 2
 				elif button[a][b] == "X" and button[a+1][b] == "X" and button[a+2][b] == "X":
 					Glovar.win = "X"
+					plus = 3
 				if button[a][b] == "O" and button[a][b+1] == "O" and button[a][b+2] == "O":
 					Glovar.win = "O"
+					plus = 3
 				elif button[a][b] == "O" and button[a-1][b-1] == "O" and button[a-2][b-2] == "O":
 					Glovar.win = "O"
+					plus = 2
 				elif button[a][b] == "O" and button[a+1][b] == "O" and button[a+2][b] == "O":
 					Glovar.win = "O"
+					plus = 3
 			elif b == 1 and a == 1:
 				if button[a][b] == "X" and button[a][b+1] == "X" and button[a][b-1] == "X":
 					Glovar.win = "X"
+					plus = 2
 				elif button[a][b] == "X" and button[a+1][b] == "X" and button[a-1][b] == "X":
 					Glovar.win = "X"
+					plus = 3
 				elif button[a][b] == "X" and button[a+1][b-1] == "X" and button[a-1][b+1] == "X":
 					Glovar.win = "X"
+					plus = 2
 				elif button[a][b] == "X" and button[a+1][b+1] == "X" and button[a-1][b-1] == "X":
 					Glovar.win = "X"
+					plus = 3
 				if button[a][b] == "O" and button[a][b+1] == "O" and button[a][b-1] == "O":
 					Glovar.win = "O"
+					plus = 2
 				elif button[a][b] == "O" and button[a+1][b] == "O" and button[a-1][b] == "O":
 					Glovar.win = "O"
+					plus = 3
 				elif button[a][b] == "O" and button[a+1][b+1] == "O" and button[a-1][b-1] == "O":
 					Glovar.win = "O"
+					plus = 2
 				elif button[a][b] == "O" and button[a+1][b-1] == "O" and button[a-1][b+1] == "O":
 					Glovar.win = "O"
+					plus = 3
 			elif (b == 2 and a == 2):
 				if button[a][b] == "X" and button[a][b-1] == "X" and button[a][b-2] == "X":
 					Glovar.win = "X"
+					plus = 3
 				elif button[a][b] == "X" and button[a-1][b] == "X" and button[a-2][b] == "X":
 					Glovar.win = "X"
+					plus = 3
 				if button[a][b] == "O" and button[a][b-1] == "O" and button[a][b-2] == "O":
 					Glovar.win = "O"
+					plus = 3
 				elif button[a][b] == "O" and button[a-1][b] == "O" and button[a-2][b] == "O":
 					Glovar.win = "O"
+					plus = 3
 	
-	if Glovar.win == "X":
-		pass
-	elif Glovar.win == "O":
-		pass
+	if Glovar.win != "" and scoreplus == true:
+		Glovar.score += plus
+		scoreplus = false
 	
 	if Glovar.replay == true:
 		Glovar.win = ""
+		scoreplus = true
 		
 	
 	if $board/d/aa.state != "" and $board/d/ab.state != "" and $board/d/ac.state != "" :
