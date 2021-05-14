@@ -17,5 +17,6 @@ func _ready():
 
 
 func _on_exit_pressed():
+	$save._save()
 	get_tree().paused = false
 	get_tree().change_scene("res://src/other/menu/menu.tscn")

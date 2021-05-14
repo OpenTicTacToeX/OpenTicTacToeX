@@ -46,6 +46,5 @@ normal = ExtResource( 4 )
 position = Vector2( 43.3317, 10.4799 )
 scale = Vector2( 0.372879, 0.372879 )
 texture = ExtResource( 8 )
-
 [connection signal="pressed" from="Node2D/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Node2D/exit" to="." method="_on_exit_pressed"]

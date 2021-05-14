@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://textures/black.png" type="Texture" id=1]
 [ext_resource path="res://textures/menu/menu.png" type="Texture" id=2]
 [ext_resource path="res://src/other/pause/pause.gd" type="Script" id=3]
+[ext_resource path="res://src/other/save/save.tscn" type="PackedScene" id=4]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -33,4 +34,5 @@ scale = Vector2( 0.5, 0.5 )
 normal = ExtResource( 2 )
 shape = SubResource( 2 )
 
+[node name="save" parent="." instance=ExtResource( 4 )]
 [connection signal="pressed" from="view/exit" to="." method="_on_exit_pressed"]

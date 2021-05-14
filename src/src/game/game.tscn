@@ -122,7 +122,6 @@ centered = false
 pause_mode = 2
 
 [node name="save" parent="." instance=ExtResource( 12 )]
-
 [connection signal="pressed" from="menu/menu" to="." method="_on_menu_pressed"]
 [connection signal="pressed" from="menu/replay" to="." method="_on_replay_pressed"]
 [connection signal="pressed" from="end_screen/view" to="." method="_on_view_pressed"]
