@@ -47,7 +47,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/PersistenceNode/plugin.cfg" )
+enabled=PoolStringArray(  )
 
 [input]
 
