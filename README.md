@@ -11,5 +11,5 @@ This game is made in [Godot v3.2.3-stable](https://downloads.tuxfamily.org/godot
 
 Screenshots:
 
-[(can202.github.io/OpenTicTacToeX/screenshots/1.png)]
-[(can202.github.io/OpenTicTacToeX/screenshots/2.png)]
+[![Screenshot](can202.github.io/OpenTicTacToeX/screenshots/1.png)]
+[![Screenshot](can202.github.io/OpenTicTacToeX/screenshots/2.png)]
