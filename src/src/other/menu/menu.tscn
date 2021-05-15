@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/other/back/back.tscn" type="PackedScene" id=1]
 [ext_resource path="res://textures/effect.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://src/other/save/save.tscn" type="PackedScene" id=7]
 [ext_resource path="res://textures/icon/header.png" type="Texture" id=8]
 [ext_resource path="res://textures/menu/info.png" type="Texture" id=9]
+[ext_resource path="res://src/other/music/music.tscn" type="PackedScene" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 8, 8 )
@@ -53,6 +54,8 @@ texture = ExtResource( 8 )
 modulate = Color( 0.356863, 0.431373, 1, 0.470588 )
 position = Vector2( 66.6137, 35.492 )
 normal = ExtResource( 9 )
+
+[node name="music" parent="." instance=ExtResource( 10 )]
 [connection signal="pressed" from="Node2D/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Node2D/exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Node2D/store" to="." method="_on_store_pressed"]

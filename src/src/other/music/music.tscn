@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://music/damdum.ogg" type="AudioStream" id=1]
+
+[node name="music" type="Node"]
+
+[node name="music" type="Node" parent="."]
+
+[node name="damdum" type="AudioStreamPlayer" parent="music"]
+stream = ExtResource( 1 )
+
+[node name="fx" type="Node" parent="."]
