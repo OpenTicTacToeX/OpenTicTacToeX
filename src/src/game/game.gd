@@ -132,9 +132,10 @@ func _on_menu_pressed():
 
 
 func _on_view_pressed():
-	$end_screen/timetoview.start()
-	$end_screen.hide()
-	get_tree().paused = true
+	if $end_screen.buttonw == true:
+		$end_screen/timetoview.start()
+		$end_screen.hide()
+		get_tree().paused = true
 
 
 func _on_timetoview_timeout():
