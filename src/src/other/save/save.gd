@@ -30,11 +30,16 @@ func _loadsize():
 		if data.has("sizex") == false:
 			data["sizex"] = 850
 			data["sizey"] = 480
-			$size.save_data("size")
+		elif data["sizex"] == 0:
+			data["sizex"] = 850
+			data["sizey"] = 480
+			
+			
 		Glovar.size.x = data["sizex"]
 		Glovar.size.y = int(data["sizex"] / 16 * 9)
 		OS.window_fullscreen = data["fullscreen"]
 		OS.set_window_size(Glovar.size)
+		$size.save_data("size")
 
 func _savedeco():
 	var data = $deco.get_data("deco")
@@ -53,6 +58,7 @@ func _loaddeco():
 			data["board"] = 1
 		Glovar.back = data["back"]
 		Glovar.board = data["board"]
+		$deco.save_data("deco")
 	
 func _savescore():
 	var data = $score.get_data("score")
@@ -71,6 +77,7 @@ func _loadscore():
 			data["score"] = 0
 		
 		Glovar.score = data["score"]
+		$score.save_data("score")
 
 func _save():
 	_savesize()
