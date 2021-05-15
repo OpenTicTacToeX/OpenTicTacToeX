@@ -9,8 +9,9 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$music/music/damdum.play(Glovar.time_song_damdum)
 	$save._load()
+	if Glovar.Volume_Music == true:
+		$music/music/damdum.play(Glovar.time_song_damdum)
 	pass
 
 

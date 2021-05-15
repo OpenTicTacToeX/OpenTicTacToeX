@@ -15,6 +15,10 @@ var plus = 1
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$music/music/damdum.play(Glovar.time_song_damdum)
+	if Glovar.Volume_Music == false:
+		$music/music/damdum.volume_db = -80
+	else:
+		$music/music/damdum.volume_db = 0
 	scoreplus = true
 	Glovar.win = ""
 	plus = 1
@@ -22,6 +26,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
+	if Glovar.Volume_Music == false:
+		$music/music/damdum.volume_db = -80
+	else:
+		$music/music/damdum.volume_db = 0
 	
 	if Glovar.end_screen == true:
 		Glovar.end_screen = false

@@ -19,3 +19,8 @@ folder_name = "save"
 [node name="score" type="Node" parent="."]
 script = ExtResource( 1 )
 folder_name = "save"
+
+[node name="settings" type="Node" parent="."]
+script = ExtResource( 1 )
+mode = 1
+folder_name = "save"

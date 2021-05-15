@@ -41,6 +41,7 @@ tracks/0/keys = {
 }
 
 [node name="end_screen" type="Node2D"]
+position = Vector2( 0, -48 )
 script = ExtResource( 2 )
 
 [node name="back" parent="." instance=ExtResource( 5 )]

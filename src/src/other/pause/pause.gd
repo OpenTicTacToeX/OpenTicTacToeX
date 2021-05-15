@@ -27,3 +27,10 @@ func _on_exit_pressed():
 	$save._save()
 	get_tree().paused = false
 	Glovar.end_screen = true
+
+
+func _on_volume_pressed():
+	if Glovar.Volume_Music == true:
+		Glovar.Volume_Music = false
+	else:
+		Glovar.Volume_Music = true

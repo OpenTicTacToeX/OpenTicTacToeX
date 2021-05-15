@@ -35,7 +35,15 @@ scale = Vector2( 0.5, 0.5 )
 normal = ExtResource( 2 )
 shape = SubResource( 2 )
 
+[node name="volume" type="TouchScreenButton" parent="view"]
+modulate = Color( 0.356863, 0.431373, 1, 1 )
+position = Vector2( 31, 12 )
+scale = Vector2( 0.5, 0.5 )
+normal = ExtResource( 2 )
+shape = SubResource( 2 )
+
 [node name="save" parent="." instance=ExtResource( 4 )]
 
 [node name="music" parent="." instance=ExtResource( 5 )]
 [connection signal="pressed" from="view/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="view/volume" to="." method="_on_volume_pressed"]

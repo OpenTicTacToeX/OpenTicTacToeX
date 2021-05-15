@@ -79,14 +79,33 @@ func _loadscore():
 		Glovar.score = data["score"]
 		$score.save_data("score")
 
+func _savesettings():
+	var data = $settings.get_data("settings")
+	data["volume_music"] = Glovar.Volume_Music
+	
+	$settings.save_data("settings")
+func _loadsettings():
+	var data = $settings.get_data("settings")
+	if data.empty():
+		_savesettings()
+	else:
+		
+		if data.has("volume_music") == false:
+			data["volume_music"] = true
+		
+		Glovar.Volume_Music = data["volume_music"]
+	$settings.save_data("settings")
+
 func _save():
 	_savesize()
 	_savedeco()
 	_savescore()
+	_savesettings()
 func _load():
 	_loadsize()
 	_loaddeco()
 	_loadscore()
+	_loadsettings()
 	
 
 func _delete():
