@@ -13,6 +13,7 @@ var savesize = Vector2()
 var back = 1
 var board = 1
 var score = 0
+var buttonw = true
 
 
 # Called when the node enters the scene tree for the first time.

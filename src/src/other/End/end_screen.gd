@@ -26,6 +26,7 @@ func _process(delta):
 		first = true
 		f = true
 		
+	Glovar.buttonw = buttonw
 
 
 func _on_replay_pressed():

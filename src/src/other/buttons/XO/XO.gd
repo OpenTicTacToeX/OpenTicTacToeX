@@ -29,12 +29,13 @@ func _process(delta):
 
 
 func _on_XO_pressed():
-	tempstate = state
-	if state == "" and Glovar.turn == "X":
-		state = "X"
-	if state == "" and Glovar.turn == "O":
-		state = "O"
-	if Glovar.turn == "X" and tempstate == "":
-		Glovar.turn = "O"
-	elif Glovar.turn == "O" and tempstate == "":
-		Glovar.turn = "X"
+	if Glovar.buttonw == true:
+		tempstate = state
+		if state == "" and Glovar.turn == "X":
+			state = "X"
+		if state == "" and Glovar.turn == "O":
+			state = "O"
+		if Glovar.turn == "X" and tempstate == "":
+			Glovar.turn = "O"
+		elif Glovar.turn == "O" and tempstate == "":
+			Glovar.turn = "X"
