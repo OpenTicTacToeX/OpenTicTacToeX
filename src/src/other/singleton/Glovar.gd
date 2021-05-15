@@ -14,6 +14,9 @@ var back = 1
 var board = 1
 var score = 0
 var buttonw = true
+var end_screen = false
+
+var time_song_damdum = 0 
 
 
 # Called when the node enters the scene tree for the first time.

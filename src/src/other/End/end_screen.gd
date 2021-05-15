@@ -55,8 +55,8 @@ func _on_exit_pressed():
 
 func _on_menu_pressed():
 	if buttonw == true:
+		Glovar.end_screen = true
 		$save._save()
-		get_tree().change_scene("res://src/other/menu/menu.tscn")
 
 
 func _on_anim_animation_started(anim_name):

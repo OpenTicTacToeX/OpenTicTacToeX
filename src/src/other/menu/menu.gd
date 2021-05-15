@@ -9,7 +9,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$music/music/damdum.play()
+	$music/music/damdum.play(Glovar.time_song_damdum)
 	$save._load()
 	pass
 
@@ -20,6 +20,7 @@ func _ready():
 
 
 func _on_play_pressed():
+	$music._save_song_time_damdum()
 	get_tree().change_scene("res://src/game/game.tscn")
 
 

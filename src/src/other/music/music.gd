@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Node
 
 
 # Declare member variables here. Examples:
@@ -8,22 +8,12 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$view.hide()
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 
-func _notification(what):
-	if (what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST):
-		#
-		$save._save()
-		#
-		get_tree().quit()
-
-
-func _on_exit_pressed():
-	$save._save()
-	get_tree().paused = false
-	Glovar.end_screen = true
+func _save_song_time_damdum():
+	Glovar.time_song_damdum = $music/damdum.get_playback_position()

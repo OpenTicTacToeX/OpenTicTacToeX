@@ -14,6 +14,7 @@ var plus = 1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$music/music/damdum.play(Glovar.time_song_damdum)
 	scoreplus = true
 	Glovar.win = ""
 	plus = 1
@@ -22,7 +23,10 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	
-	
+	if Glovar.end_screen == true:
+		Glovar.end_screen = false
+		$music._save_song_time_damdum()
+		get_tree().change_scene("res://src/other/menu/menu.tscn")
 	
 	
 	button[0][0] = $board/d/aa.state
@@ -141,3 +145,5 @@ func _on_view_pressed():
 func _on_timetoview_timeout():
 	get_tree().paused = false
 	$end_screen.show()
+	
+	
