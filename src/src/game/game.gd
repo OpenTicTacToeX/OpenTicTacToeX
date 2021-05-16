@@ -129,23 +129,25 @@ func _process(delta):
 
 
 func _on_replay_pressed():
-	Glovar.restart = true
-	$end_screen/anim.current_animation = "start"
-	#$end_screen._on_replay_pressed()
+	if Glovar.win == "":
+		Glovar.restart = true
+		$end_screen/anim.current_animation = "start"
+		#$end_screen._on_replay_pressed()
 
 
 func _on_menu_pressed():
-	if get_tree().paused == false:
-		$pause/view.show()
-		get_tree().paused = true
-	elif get_tree().paused == true:
-		$pause/view.hide()
-		get_tree().paused = false
+	if Glovar.win == "":
+		if get_tree().paused == false:
+			$pause/view.show()
+			get_tree().paused = true
+		elif get_tree().paused == true:
+			$pause/view.hide()
+			get_tree().paused = false
 		
 
 
 func _on_view_pressed():
-	if $end_screen.buttonw == true:
+	if Glovar.end_screen == true:
 		$end_screen/timetoview.start()
 		$end_screen.hide()
 		get_tree().paused = true

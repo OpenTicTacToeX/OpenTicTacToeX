@@ -34,3 +34,10 @@ func _on_volume_pressed():
 		Glovar.Volume_Music = false
 	else:
 		Glovar.Volume_Music = true
+
+
+func _on_fx_pressed():
+	if Glovar.Volume_FX == true:
+		Glovar.Volume_FX = false
+	else:
+		Glovar.Volume_FX = true

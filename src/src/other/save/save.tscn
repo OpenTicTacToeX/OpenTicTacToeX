@@ -6,21 +6,11 @@
 [node name="save" type="Node2D"]
 script = ExtResource( 2 )
 
-[node name="size" type="Node" parent="."]
-script = ExtResource( 1 )
-mode = 1
-folder_name = "save"
-
-[node name="deco" type="Node" parent="."]
-script = ExtResource( 1 )
-mode = 1
-folder_name = "save"
-
-[node name="score" type="Node" parent="."]
+[node name="encrypted" type="Node" parent="."]
 script = ExtResource( 1 )
 folder_name = "save"
 
-[node name="settings" type="Node" parent="."]
+[node name="text" type="Node" parent="."]
 script = ExtResource( 1 )
 mode = 1
 folder_name = "save"

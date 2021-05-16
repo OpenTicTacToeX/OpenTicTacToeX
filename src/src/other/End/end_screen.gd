@@ -6,7 +6,6 @@ extends Node2D
 # var b = "text"
 var first = false
 var f = false
-var buttonw = true
 
 
 # Called when the node enters the scene tree for the first time.
@@ -26,11 +25,10 @@ func _process(delta):
 		first = true
 		f = true
 		
-	Glovar.buttonw = buttonw
 
 
 func _on_replay_pressed():
-	if buttonw == true:
+	if Glovar.buttonw == true:
 		Glovar.replay = true
 		first = false
 		f = false
@@ -44,20 +42,20 @@ func _on_anim_animation_finished(anim_name):
 	if anim_name == "start" and Glovar.restart == true:
 		_on_replay_pressed()
 		Glovar.restart = false
-	buttonw = true
+	Glovar.buttonw = true
 
 
 func _on_exit_pressed():
-	if buttonw == true:
+	if Glovar.buttonw == true:
 		$save._save()
 		get_tree().quit()
 
 
 func _on_menu_pressed():
-	if buttonw == true:
+	if Glovar.buttonw == true:
 		Glovar.end_screen = true
 		$save._save()
 
 
 func _on_anim_animation_started(anim_name):
-	buttonw = false
+	Glovar.buttonw = false

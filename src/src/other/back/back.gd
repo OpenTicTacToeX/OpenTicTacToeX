@@ -13,6 +13,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if Input.is_action_just_pressed("clickizq") and Glovar.Volume_FX == true:
+		$music/fx/click.play()
 	if Glovar.back == 1:
 		animation = "back1"
 	elif Glovar.back == 2:

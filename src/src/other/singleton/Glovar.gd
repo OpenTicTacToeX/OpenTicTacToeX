@@ -18,6 +18,7 @@ var end_screen = false
 
 var time_song_damdum = 0 
 var Volume_Music = true
+var Volume_FX = true
 
 
 # Called when the node enters the scene tree for the first time.

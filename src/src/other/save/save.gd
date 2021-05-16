@@ -17,13 +17,13 @@ func _process(delta):
 
 
 func _savesize():
-	var data = $size.get_data("size")
+	var data = $text.get_data("size")
 	data["sizex"] = Glovar.size.x
 	data["sizey"] = Glovar.size.y
 	data["fullscreen"] = OS.window_fullscreen
-	$size.save_data("size")
+	$text.save_data("size")
 func _loadsize():
-	var data = $size.get_data("size")
+	var data = $text.get_data("size")
 	if data.empty():
 		_savesize()
 	else:
@@ -39,16 +39,16 @@ func _loadsize():
 		Glovar.size.y = int(data["sizex"] / 16 * 9)
 		OS.window_fullscreen = data["fullscreen"]
 		OS.set_window_size(Glovar.size)
-		$size.save_data("size")
+		$text.save_data("size")
 
 func _savedeco():
-	var data = $deco.get_data("deco")
+	var data = $text.get_data("deco")
 	data["back"] = Glovar.back
 	data["board"] = Glovar.board
-	$deco.save_data("deco")
+	$text.save_data("deco")
 	
 func _loaddeco():
-	var data = $deco.get_data("deco")
+	var data = $text.get_data("deco")
 	if data.empty():
 		_savesize()
 	else:
@@ -58,15 +58,15 @@ func _loaddeco():
 			data["board"] = 1
 		Glovar.back = data["back"]
 		Glovar.board = data["board"]
-		$deco.save_data("deco")
+		$text.save_data("deco")
 	
 func _savescore():
-	var data = $score.get_data("score")
+	var data = $encrypted.get_data("score")
 	data["score"] = Glovar.score
-	$score.save_data("score")
+	$encrypted.save_data("score")
 
 func _loadscore():
-	var data = $score.get_data("score")
+	var data = $encrypted.get_data("score")
 	if data.empty():
 		_savescore()
 	else:
@@ -77,24 +77,27 @@ func _loadscore():
 			data["score"] = 0
 		
 		Glovar.score = data["score"]
-		$score.save_data("score")
+		$encrypted.save_data("score")
 
 func _savesettings():
-	var data = $settings.get_data("settings")
+	var data = $text.get_data("settings")
 	data["volume_music"] = Glovar.Volume_Music
+	data["volume_fx"] = Glovar.Volume_FX
 	
-	$settings.save_data("settings")
+	$text.save_data("settings")
 func _loadsettings():
-	var data = $settings.get_data("settings")
+	var data = $text.get_data("settings")
 	if data.empty():
 		_savesettings()
 	else:
 		
 		if data.has("volume_music") == false:
 			data["volume_music"] = true
-		
+		if data.has("volume_fx") == false:
+			data["volume_fx"] = true
+		Glovar.Volume_FX = data["volume_fx"]
 		Glovar.Volume_Music = data["volume_music"]
-	$settings.save_data("settings")
+	$text.save_data("settings")
 
 func _save():
 	_savesize()
@@ -109,7 +112,8 @@ func _load():
 	
 
 func _delete():
-	$deco.remove_profile("deco")
-	$size.remove_profile("size")
-	$score.remove_profile("score")
+	$text.remove_profile("deco")
+	$text.remove_profile("size")
+	$text.remove_profile("settings")
+	$encrypted.remove_profile("score")
 	get_tree().quit()

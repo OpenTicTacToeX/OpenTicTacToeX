@@ -12,6 +12,7 @@ const PRICEboard2 = 150
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	Glovar.time_song_damdum = 0
 	$back_images/back2/price.text = str(PRICEback2)
 	$back_images/back3/price.text = str(PRICEback3)
 	$back_images/back4/price.text = str(PRICEback4)
