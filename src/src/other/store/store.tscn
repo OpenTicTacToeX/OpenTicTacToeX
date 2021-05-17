@@ -60,7 +60,7 @@ scale = Vector2( 0.125, 0.125 )
 normal = ExtResource( 5 )
 
 [node name="price" type="Label" parent="back_images/back3"]
-modulate = Color( 0.356863, 0.431373, 1, 1 )
+modulate = Color( 0.67451, 0.196078, 0.196078, 1 )
 margin_left = 1.0
 margin_top = 47.0
 margin_right = 211.0
@@ -108,7 +108,7 @@ scale = Vector2( 0.25, 0.25 )
 normal = ExtResource( 11 )
 
 [node name="price" type="Label" parent="board_images/board2"]
-modulate = Color( 0.356863, 0.431373, 1, 1 )
+modulate = Color( 0.67451, 0.196078, 0.196078, 1 )
 margin_top = 46.0
 margin_right = 235.0
 margin_bottom = 164.0
