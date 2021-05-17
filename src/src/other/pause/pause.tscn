@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://textures/black.png" type="Texture" id=1]
 [ext_resource path="res://textures/menu/menu.png" type="Texture" id=2]
 [ext_resource path="res://src/other/pause/pause.gd" type="Script" id=3]
 [ext_resource path="res://src/other/save/save.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/other/music/music.tscn" type="PackedScene" id=5]
+[ext_resource path="res://textures/menu/music.png" type="Texture" id=6]
+[ext_resource path="res://textures/menu/fx.png" type="Texture" id=7]
+[ext_resource path="res://textures/menu/exit.png" type="Texture" id=8]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -20,6 +23,7 @@ animations = [ {
 script = ExtResource( 3 )
 
 [node name="view" type="Node2D" parent="."]
+visible = false
 
 [node name="back" type="AnimatedSprite" parent="view"]
 modulate = Color( 1, 1, 1, 0.329412 )
@@ -35,18 +39,28 @@ normal = ExtResource( 2 )
 shape = SubResource( 2 )
 
 [node name="volume" type="TouchScreenButton" parent="view"]
-modulate = Color( 0.356863, 0.431373, 1, 1 )
+modulate = Color( 0.67451, 0.196078, 0.196078, 1 )
 position = Vector2( 31, 12 )
 scale = Vector2( 0.5, 0.5 )
-normal = ExtResource( 2 )
+normal = ExtResource( 6 )
 shape = SubResource( 2 )
+
+[node name="x" type="Sprite" parent="view/volume"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 8, 8 )
+texture = ExtResource( 8 )
 
 [node name="fx" type="TouchScreenButton" parent="view"]
 modulate = Color( 0.356863, 0.431373, 1, 1 )
 position = Vector2( 42, 12 )
 scale = Vector2( 0.5, 0.5 )
-normal = ExtResource( 2 )
+normal = ExtResource( 7 )
 shape = SubResource( 2 )
+
+[node name="x" type="Sprite" parent="view/fx"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 8, 8 )
+texture = ExtResource( 8 )
 
 [node name="save" parent="." instance=ExtResource( 4 )]
 

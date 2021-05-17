@@ -12,8 +12,15 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	if Glovar.Volume_Music == true:
+		$view/volume/x.hide()
+	else:
+		$view/volume/x.show()
+	if Glovar.Volume_FX == true:
+		$view/fx/x.hide()
+	else:
+		$view/fx/x.show()
 
 func _notification(what):
 	if (what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST):
