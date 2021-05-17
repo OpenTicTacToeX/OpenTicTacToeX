@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://textures/board/board1.png" type="Texture" id=1]
 [ext_resource path="res://src/other/board/board.gd" type="Script" id=2]
 [ext_resource path="res://textures/board/board2.png" type="Texture" id=3]
+[ext_resource path="res://textures/board/board3.png" type="Texture" id=4]
+[ext_resource path="res://textures/board/board4.png" type="Texture" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -15,10 +17,20 @@ animations = [ {
 "loop": true,
 "name": "2",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "3",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "4",
+"speed": 5.0
 } ]
 
 [node name="board" type="AnimatedSprite"]
 frames = SubResource( 1 )
-animation = "2"
+animation = "1"
 centered = false
 script = ExtResource( 2 )

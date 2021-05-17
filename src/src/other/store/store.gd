@@ -8,6 +8,8 @@ const PRICEback2 = 20
 const PRICEback3 = 50
 const PRICEback4 = 100
 const PRICEboard2 = 150
+const PRICEboard3 = 300
+const PRICEboard4 = 200
 
 
 # Called when the node enters the scene tree for the first time.
@@ -17,6 +19,8 @@ func _ready():
 	$back_images/back3/price.text = str(PRICEback3)
 	$back_images/back4/price.text = str(PRICEback4)
 	$board_images/board2/price.text = str(PRICEboard2)
+	$board_images/board3/price.text = str(PRICEboard3)
+	$board_images/board4/price.text = str(PRICEboard4)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -32,6 +36,10 @@ func _process(delta):
 		$back_images/back4/price.hide()
 	if Glovar.score >= PRICEboard2:
 		$board_images/board2/price.hide()
+	if Glovar.score >= PRICEboard3:
+		$board_images/board3/price.hide()
+	if Glovar.score >= PRICEboard4:
+		$board_images/board4/price.hide()
 	
 	$score.text = str(Glovar.score)
 
@@ -65,3 +73,9 @@ func _on_board1_pressed():
 func _on_board2_pressed():
 	if Glovar.score >= PRICEboard2:
 		Glovar.board = 2
+func _on_board3_pressed():
+	if Glovar.score >= PRICEboard3:
+		Glovar.board = 3
+func _on_board4_pressed():
+	if Glovar.score >= PRICEboard4:
+		Glovar.board = 4
