@@ -147,7 +147,7 @@ func _on_menu_pressed():
 
 
 func _on_view_pressed():
-	if Glovar.end_screen == false:
+	if Glovar.buttonw == true and Glovar.win != "":
 		$end_screen/timetoview.start()
 		$end_screen.hide()
 		get_tree().paused = true

@@ -6,6 +6,8 @@ extends Node2D
 # var b = "text"
 var first = false
 var f = false
+var temptorestart = false
+var temptorestart2 = false
 
 
 # Called when the node enters the scene tree for the first time.
@@ -15,6 +17,12 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
+	if temptorestart == true and temptorestart2 == true:
+		temptorestart = false
+		temptorestart2 = false
+		_on_replay_pressed()
+		
 	if Input.is_action_just_pressed("R"):
 		first = false
 		f = false
@@ -42,7 +50,9 @@ func _on_anim_animation_finished(anim_name):
 	if anim_name == "start" and Glovar.restart == true:
 		_on_replay_pressed()
 		Glovar.restart = false
+		temptorestart = true
 	Glovar.buttonw = true
+	temptorestart2 = true
 
 
 func _on_exit_pressed():
