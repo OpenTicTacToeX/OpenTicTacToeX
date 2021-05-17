@@ -48,3 +48,8 @@ func _on_fx_pressed():
 		Glovar.Volume_FX = false
 	else:
 		Glovar.Volume_FX = true
+
+
+func _on_menu_pressed():
+	$view.hide()
+	get_tree().paused = false
