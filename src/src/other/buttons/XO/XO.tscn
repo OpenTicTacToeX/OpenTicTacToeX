@@ -18,4 +18,5 @@ centered = false
 [node name="X" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 centered = false
+
 [connection signal="pressed" from="." to="." method="_on_XO_pressed"]

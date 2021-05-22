@@ -78,6 +78,7 @@ texture = ExtResource( 8 )
 [node name="save" parent="." instance=ExtResource( 4 )]
 
 [node name="music" parent="." instance=ExtResource( 5 )]
+
 [connection signal="pressed" from="view/exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="view/menu" to="." method="_on_menu_pressed"]
 [connection signal="pressed" from="view/volume" to="." method="_on_volume_pressed"]

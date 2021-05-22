@@ -191,6 +191,7 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
 [connection signal="pressed" from="back_images/back1" to="." method="_on_back1_pressed"]
 [connection signal="pressed" from="back_images/back2" to="." method="_on_back2_pressed"]
 [connection signal="pressed" from="back_images/back3" to="." method="_on_back3_pressed"]

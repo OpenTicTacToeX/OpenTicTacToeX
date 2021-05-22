@@ -68,6 +68,7 @@ normal = ExtResource( 3 )
 [node name="save" parent="." instance=ExtResource( 6 )]
 
 [node name="music" parent="." instance=ExtResource( 7 )]
+
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
 [connection signal="animation_started" from="anim" to="." method="_on_anim_animation_started"]
 [connection signal="pressed" from="menu" to="." method="_on_menu_pressed"]

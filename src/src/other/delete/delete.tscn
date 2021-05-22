@@ -83,5 +83,6 @@ __meta__ = {
 }
 
 [node name="save" parent="." instance=ExtResource( 5 )]
+
 [connection signal="pressed" from="yes" to="." method="_on_yes_pressed"]
 [connection signal="pressed" from="no" to="." method="_on_no_pressed"]
