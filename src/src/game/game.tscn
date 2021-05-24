@@ -41,6 +41,7 @@ script = ExtResource( 6 )
 position = Vector2( 18, 0 )
 
 [node name="d" type="Node2D" parent="board"]
+position = Vector2( 1, 1 )
 
 [node name="aa" parent="board/d" instance=ExtResource( 4 )]
 position = Vector2( 18, 0 )

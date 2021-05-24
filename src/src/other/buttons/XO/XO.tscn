@@ -5,17 +5,19 @@
 [ext_resource path="res://src/other/buttons/XO/XO.gd" type="Script" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 7.75, 7.75 )
+extents = Vector2( 7, 7 )
 
 [node name="XO" type="TouchScreenButton"]
 shape = SubResource( 1 )
 script = ExtResource( 3 )
 
 [node name="O" type="Sprite" parent="."]
+position = Vector2( -1, -1 )
 texture = ExtResource( 2 )
 centered = false
 
 [node name="X" type="Sprite" parent="."]
+position = Vector2( -1, -1 )
 texture = ExtResource( 1 )
 centered = false
 
