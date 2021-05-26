@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/amtoe.ogg-740cbd1e24f1a1cf55a532d1ba455d73.oggstr"
+
+[deps]
+
+source_file="res://music/amtoe.ogg"
+dest_files=[ "res://.import/amtoe.ogg-740cbd1e24f1a1cf55a532d1ba455d73.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://src/other/back/back.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/other/store/store.gd" type="Script" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://font/Pixeled.ttf" type="DynamicFontData" id=13]
 [ext_resource path="res://textures/board/board3.png" type="Texture" id=14]
 [ext_resource path="res://textures/board/board4.png" type="Texture" id=15]
+[ext_resource path="res://src/other/music/music.tscn" type="PackedScene" id=16]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
@@ -192,6 +193,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="music" parent="." instance=ExtResource( 16 )]
+
+[node name="Timer" type="Timer" parent="music"]
+wait_time = 0.5
+
 [connection signal="pressed" from="back_images/back1" to="." method="_on_back1_pressed"]
 [connection signal="pressed" from="back_images/back2" to="." method="_on_back2_pressed"]
 [connection signal="pressed" from="back_images/back3" to="." method="_on_back3_pressed"]
@@ -201,3 +207,4 @@ __meta__ = {
 [connection signal="pressed" from="board_images/board3" to="." method="_on_board3_pressed"]
 [connection signal="pressed" from="board_images/board4" to="." method="_on_board4_pressed"]
 [connection signal="pressed" from="exit" to="." method="_on_exit_pressed"]
+[connection signal="timeout" from="music/Timer" to="." method="_on_Timer_timeout"]

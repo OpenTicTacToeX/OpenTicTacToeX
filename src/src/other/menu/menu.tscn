@@ -57,7 +57,11 @@ normal = ExtResource( 9 )
 
 [node name="music" parent="." instance=ExtResource( 10 )]
 
+[node name="Timer" type="Timer" parent="music"]
+wait_time = 0.5
+
 [connection signal="pressed" from="Node2D/play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Node2D/exit" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Node2D/store" to="." method="_on_store_pressed"]
 [connection signal="pressed" from="delete_all" to="." method="_on_delete_all_pressed"]
+[connection signal="timeout" from="music/Timer" to="." method="_on_Timer_timeout"]

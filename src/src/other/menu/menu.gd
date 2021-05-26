@@ -10,8 +10,7 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$save._load()
-	if Glovar.Volume_Music == true:
-		$music/music/damdum.play(Glovar.time_song_damdum)
+	$music/Timer.start()
 	pass
 
 
@@ -45,3 +44,9 @@ func _on_store_pressed():
 
 func _on_delete_all_pressed():
 	get_tree().change_scene("res://src/other/delete/delete.tscn")
+
+
+func _on_Timer_timeout():
+	$music/Timer.stop()
+	if Glovar.Volume_Music == true:
+		$music/music/damdum.play(Glovar.time_song_damdum)

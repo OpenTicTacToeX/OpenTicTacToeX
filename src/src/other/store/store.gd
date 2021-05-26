@@ -14,6 +14,7 @@ const PRICEboard4 = 200
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	$music/Timer.start()
 	Glovar.time_song_damdum = 0
 	$back_images/back2/price.text = str(PRICEback2)
 	$back_images/back3/price.text = str(PRICEback3)
@@ -79,3 +80,9 @@ func _on_board3_pressed():
 func _on_board4_pressed():
 	if Glovar.score >= PRICEboard4:
 		Glovar.board = 4
+
+
+func _on_Timer_timeout():
+	if Glovar.Volume_Music == true:
+		$music/music/amtoe.play()
+	$music/Timer.stop()
