@@ -36,3 +36,4 @@ func _process(delta):
 	elif Input.is_action_just_pressed("reset_SIZE"):
 		OS.set_window_size(Vector2(850,480))
 		OS.window_fullscreen = false
+		

@@ -11,6 +11,7 @@ extends Node2D
 func _ready():
 	$save._load()
 	$music/Timer.start()
+	OS.center_window()
 	pass
 
 
